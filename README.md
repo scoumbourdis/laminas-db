@@ -1,5 +1,16 @@
 # laminas-db
 
+A Fork of `laminas/laminas-db` with support of PHP 8.4 version. We are literally keeping everything untouched except 
+the `composer.json` file since we want to upgrade easily and to understand the changes in the future.
+
+In short, laminas-db IS compatible with PHP 8.4 with the only issue that the pipeline is failing because of Microsoft 
+SQL Server support, which is not compatible with PHP 8.4. For more information, you can check this thread:
+[laminas/laminas-db PR #312](https://github.com/laminas/laminas-db/pull/312)
+
+If Microsoft adds support for the PHP 8.4 driver, we can expect that laminas/db original 
+repository will also support it.
+
+
 [![Build Status](https://github.com/laminas/laminas-db/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas/laminas-db/actions/workflows/continuous-integration.yml)
 
 > ## 🇷🇺 Русским гражданам
