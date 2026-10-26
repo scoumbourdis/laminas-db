@@ -1,6 +1,6 @@
 # laminas-db
 
-A Fork of `laminas/laminas-db` with support of PHP 8.4 version. We are literally keeping everything untouched except 
+A Fork of `laminas/laminas-db` with support of PHP 8.4 version. From 2.22.0 it follows the official `laminas/laminas-db` 2.22.0 (PHP 8.2 to 8.5); only the package name in `composer.json` is different. We are literally keeping everything untouched except 
 the `composer.json` file since we want to upgrade easily and to understand the changes in the future.
 
 In short, laminas-db IS compatible with PHP 8.4 with the only issue that the pipeline is failing because of Microsoft 
@@ -28,6 +28,11 @@ repository will also support it.
 > One team member has a Ukrainian relative who fled her home with her son. The train was delayed due to bombing on the road ahead. We have friends who are hiding in bomb shelters. We anxiously follow up on them after the air raids, which indiscriminately fire at hospitals, schools, kindergartens and houses. We're not taking this from any media. These are our actual experiences.
 >
 > You trust us enough to use our software. We ask that you trust us to say the truth on this. We need your help. Go out and protest this unnecessary war. Stop the bloodshed. Say "stop the war!"
+
+> [!CAUTION]
+> This package is considered feature-complete, and is now in **security-only** maintenance mode, following a [decision by the Technical Steering Committee](https://github.com/laminas/technical-steering-committee/blob/main/meetings/minutes/2022-02-07-TSC-Minutes.md#is-laminas-db-abandoned).
+> If you have a security issue, please [follow our security reporting guidelines](https://getlaminas.org/security/).
+> If you wish to take on the role of maintainer, please [nominate yourself](https://github.com/laminas/technical-steering-committee/issues/new?assignees=&labels=Nomination&template=Maintainer_Nomination.md&title=%5BNOMINATION%5D%5BMAINTAINER%5D%3A+%7Bname+of+person+being+nominated%7D)
 
 `Laminas\Db` is a component that abstract the access to a Database using an object
 oriented API to build the queries. `Laminas\Db` consumes different storage adapters
