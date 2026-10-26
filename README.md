@@ -1,15 +1,12 @@
 # laminas-db
 
-A Fork of `laminas/laminas-db` with support of PHP 8.4 version. From 2.22.0 it follows the official `laminas/laminas-db` 2.22.0 (PHP 8.2 to 8.5); only the package name in `composer.json` is different. We are literally keeping everything untouched except 
-the `composer.json` file since we want to upgrade easily and to understand the changes in the future.
+A fork of [`laminas/laminas-db`](https://github.com/laminas/laminas-db), published as `scoumbourdis/laminas-db`.
 
-In short, laminas-db IS compatible with PHP 8.4 with the only issue that the pipeline is failing because of Microsoft 
-SQL Server support, which is not compatible with PHP 8.4. For more information, you can check this thread:
-[laminas/laminas-db PR #312](https://github.com/laminas/laminas-db/pull/312)
+**Why a fork?** `laminas/laminas-db` is in security-only maintenance mode, and support for a new PHP version often comes months after that PHP version is released. With PHP 8.4 this blocked us: the code worked on PHP 8.4, but the official package did not allow it in its `composer.json`, because its pipeline failed on the Microsoft SQL Server driver, which did not support PHP 8.4 yet (see [laminas/laminas-db PR #312](https://github.com/laminas/laminas-db/pull/312)). So we released this fork with PHP 8.4 allowed.
 
-If Microsoft adds support for the PHP 8.4 driver, we can expect that laminas/db original 
-repository will also support it.
+**The code is untouched.** We keep the code exactly as the official package. Only `composer.json` is different (the package name, and when needed the PHP versions). This makes it easy to follow the official releases and to see every change.
 
+**Why we keep it.** When PHP 8.6, 8.7 and later versions are released, we can allow them here first, as soon as the code works on them, without waiting for an official release. When the official package catches up, we merge its release (for example 2.22.0, which added PHP 8.5).
 
 [![Build Status](https://github.com/laminas/laminas-db/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas/laminas-db/actions/workflows/continuous-integration.yml)
 
